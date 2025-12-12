@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>INEnums</key>
+	<array/>
+	<key>INIntentDefinitionModelVersion</key>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>AsHpVQ</string>
+	<key>INIntentDefinitionSystemVersion</key>
+	<string>25C5048a</string>
+	<key>INIntentDefinitionToolsBuildVersion</key>
+	<string>17A400</string>
+	<key>INIntentDefinitionToolsVersion</key>
+	<string>26.0.1</string>
+	<key>INIntents</key>
+	<array>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>Get the next Harvester event time</string>
+			<key>INIntentDescriptionID</key>
+			<string>N6GEPP</string>
+			<key>INIntentEligibleForWidgets</key>
+			<true/>
+			<key>INIntentLastParameterTag</key>
+			<integer>1</integer>
+			<key>INIntentName</key>
+			<string>GetNextHarvesterEvent</string>
+			<key>INIntentParameters</key>
+			<array/>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+						<key>INIntentResponseCodeSuccessDialog</key>
+						<string>The next harvester event is {eventTime}. {timeUntil}. Maps: {maps}.</string>
+						<key>INIntentResponseCodeSuccessDialogID</key>
+						<string>success_dialog</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+						<key>INIntentResponseCodeFailureDialog</key>
+						<string>I couldn't get the harvester event information. {eventTime}</string>
+						<key>INIntentResponseCodeFailureDialogID</key>
+						<string>failure_dialog</string>
+					</dict>
+				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>4</integer>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Event Time</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>jK9QHH</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>eventTime</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Time Until</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>oGMck9</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>timeUntil</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Maps</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>1hs7MC</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>maps</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>4</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Get Next Harvester Event</string>
+			<key>INIntentTitleID</key>
+			<string>Y9pjkp</string>
+			<key>INIntentSupportedBy</key>
+			<array>
+				<string>Siri</string>
+			</array>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
+		</dict>
+	</array>
+	<key>INTypes</key>
+	<array/>
+</dict>
+</plist>
