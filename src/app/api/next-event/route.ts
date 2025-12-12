@@ -1,5 +1,20 @@
 import { NextResponse } from 'next/server';
 
+interface EventTime {
+  start: string;
+  end: string;
+}
+
+interface HarvesterEvent {
+  name: string;
+  map: string;
+  times: EventTime[];
+}
+
+interface ApiResponse {
+  data?: HarvesterEvent[];
+}
+
 export async function GET() {
   try {
     const response = await fetch('https://metaforge.app/api/arc-raiders/event-timers?name=Harvester', {
@@ -12,8 +27,8 @@ export async function GET() {
       throw new Error(`API responded with status: ${response.status}`);
     }
 
-    const data = await response.json();
-    const harvesterEvents = data.data?.filter((event: any) => event.name === 'Harvester') || [];
+    const data = await response.json() as ApiResponse;
+    const harvesterEvents = data.data?.filter((event: HarvesterEvent) => event.name === 'Harvester') || [];
 
     if (harvesterEvents.length === 0) {
       return NextResponse.json({ message: 'No Harvester events found' });
@@ -21,8 +36,8 @@ export async function GET() {
 
     // Flatten all time slots
     const allTimeSlots: Array<{ start: string; end: string; map: string }> = [];
-    harvesterEvents.forEach((event: any) => {
-      event.times.forEach((time: any) => {
+    harvesterEvents.forEach((event: HarvesterEvent) => {
+      event.times.forEach((time: EventTime) => {
         allTimeSlots.push({
           start: time.start,
           end: time.end,
